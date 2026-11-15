@@ -1,0 +1,38 @@
+package tn.esprit.spring.domain;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDate;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Reservation {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long idReservation;
+
+    LocalDate dateDebut;
+
+    LocalDate dateFin;
+
+    @Enumerated(EnumType.STRING)
+    StatutReservation statut;
+
+    @ManyToOne
+    Client client;
+@JsonIgnore
+    @ManyToOne
+    Vehicule vehicule;
+@JsonIgnore
+    @OneToOne(cascade = CascadeType.ALL)
+    Contrat contrat;
+}
