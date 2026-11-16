@@ -13,5 +13,5 @@ public interface iReservationService {
     Reservation ajouterReservationContrat(Reservation r);
     Reservation ajouterReservationContrat2(Reservation r);
     void verifierReservationsExpirees();
+    void terminerReservationsExpireesEtLibererVehicules();
 }
-
