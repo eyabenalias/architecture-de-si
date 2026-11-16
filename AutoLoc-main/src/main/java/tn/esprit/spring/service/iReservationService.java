@@ -12,5 +12,6 @@ public interface iReservationService {
     void supprimer(Long id);
     Reservation ajouterReservationContrat(Reservation r);
     Reservation ajouterReservationContrat2(Reservation r);
+    void verifierReservationsExpirees();
 }
 
