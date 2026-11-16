@@ -69,7 +69,7 @@ public class ClientServiceIMPL implements iClientService {
 
     @Override
     public List<Client> recupererParPrenomNomEtCategorieVehicule(String prenom, String nom, CategorieVehicule categorieVehicule) {
-        return clientRepo.findByPrenomAndNomAndCategorieVehicule(prenom, nom, categorieVehicule);
+        return clientRepo.findByPrenomAndNomAndReservations_Vehicule_Categorie(prenom, nom, categorieVehicule);
     }
 }
 

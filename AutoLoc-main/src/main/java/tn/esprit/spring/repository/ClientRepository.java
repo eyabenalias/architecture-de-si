@@ -9,4 +9,5 @@ import java.util.List;
 
 @Repository
 public interface ClientRepository extends CrudRepository<Client, Long> {
-List<Client>findByPrenomAndNomAndCategorieVehicule(String prenom, String nom, CategorieVehicule categorieVehicule);}
+    List<Client> findByPrenomAndNomAndReservations_Vehicule_Categorie(String prenom, String nom, CategorieVehicule categorieVehicule);
+}
