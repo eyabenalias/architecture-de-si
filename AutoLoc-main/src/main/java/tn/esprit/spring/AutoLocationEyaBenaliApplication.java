@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import tn.esprit.spring.domain.CategorieVehicule;
 import tn.esprit.spring.domain.StatutVehicule;
 import tn.esprit.spring.domain.Vehicule;
@@ -12,6 +13,7 @@ import tn.esprit.spring.repository.VehiculeRepository;
 import java.math.BigDecimal;
 
 @SpringBootApplication
+@EnableScheduling
 public class AutoLocationEyaBenaliApplication {
 
     public static void main(String[] args) {
